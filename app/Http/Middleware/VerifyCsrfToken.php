@@ -14,8 +14,8 @@ class VerifyCsrfToken extends Middleware
     protected $except = [
         //
     	'http://localhost:8000/estadistica',
-    	'http://201.188.178.93/estadistica',
+    	'http://201.188.52.17/estadistica',
     	'http://localhost:8000/search',
-    	'http://201.188.178.93/search'
+    	'http://201.188.52.17/search'
     ];
 }
