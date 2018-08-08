@@ -33,14 +33,14 @@ class productoController extends Controller
 	public function estadistica()
 	{
 		$productoModel = new ProductoModel();
+		$productos = $productoModel->est_productos();
 
-		$result = [];
-		$result = $productoModel->est_productos();
-
-		foreach ($result as $producto) {
-			$result[$producto->idproducto] = $productoModel->est_palabras($producto->idproducto);
+		foreach ($productos as $producto) {
+			$palabras[$producto->idproducto] = array();
+			$palabras[$producto->idproducto] = $productoModel->est_palabras($producto->idproducto);
 		}
-		$resultados = json_encode($result);
-		return view('estadistica', compact('resultados'));
+		$productos = json_encode($productos);
+		$palabras = json_encode($palabras);
+		return view('estadistica', compact('productos', 'palabras'));
 	}
 }

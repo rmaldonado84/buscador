@@ -34,8 +34,8 @@
 	</header>
 	<section class="main container">
 		<div class="form-group">
-			{{ $resultados }}
-			
+			{{ $productos }}
+			{{ $palabras }}
 		</div>
 	</section>
 	<section class="main container">
