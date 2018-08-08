@@ -34,6 +34,12 @@
 	</header>
 	<section class="main container">
 		<div class="form-group">
+			{{ $resultados }}
+			
+		</div>
+	</section>
+	<section class="main container">
+		<div class="form-group">
 			<textarea id="json_response" onchange="auto_grow(this)" class="form-control">
 			</textarea>
 		</div>

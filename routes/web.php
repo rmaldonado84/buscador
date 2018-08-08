@@ -18,3 +18,5 @@ Route::get('/', function () {
 Route::get('/buscador', 'productoController@index');
 
 Route::post('/search', 'productoController@search');
+
+Route::get('/estadistica', 'productoController@estadistica');

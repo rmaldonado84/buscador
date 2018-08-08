@@ -31,4 +31,24 @@ class ProductoModel extends Model
 
     	return $result1;
     }
+
+    public function est_productos()
+    {
+    	$query = 'select idproducto, count(keyword) cantidad from estadistica group by idproducto order by cantidad DESC limit 20';
+
+    	$result = DB::select($query);
+    	return $result;
+    }
+
+    public function est_palabras($id_producto)
+    {
+    	$query = 'select keyword, count(idproducto) producto from estadistica where idproducto = :idproducto group by keyword order by producto DESC limit 5';
+    	
+    	$params = array(
+    		':idproducto' => $id_producto
+		);
+
+    	$result = DB::select($query, $params);
+    	return $result;
+    }
 }
