@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Aug 08, 2018 at 05:03 AM
+-- Generation Time: Aug 08, 2018 at 05:09 AM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 7.0.12
 
@@ -489,6 +489,13 @@ INSERT INTO `producto` (`id`, `titulo`, `descripcion`, `fecha_inicio`, `fecha_te
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `estadistica`
+--
+ALTER TABLE `estadistica`
+  ADD KEY `estadistica_idproducto` (`idproducto`),
+  ADD KEY `estadistica_keyword` (`keyword`);
 
 --
 -- Indexes for table `producto`
