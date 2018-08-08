@@ -21,9 +21,10 @@ class ProductoModel extends Model
     public function insert($result, $keyword)
     {
     	foreach ($result as $row) {
-    		$query = 'insert into estadistica(idproducto, keyword) values (:idproducto, :keyword)';
+    		$query = 'insert into estadistica(idproducto, titulo, keyword) values (:idproducto, :titulo, :keyword)';
     		$params = array(
     			':idproducto' => $row->id, 
+    			':titulo' => $row->titulo,
     			':keyword' => $keyword
     			);
     		$result1 = DB::insert($query, $params);
@@ -34,7 +35,7 @@ class ProductoModel extends Model
 
     public function est_productos()
     {
-    	$query = 'select idproducto, count(keyword) palabras from estadistica group by idproducto order by palabras DESC limit 20';
+    	$query = 'select idproducto, titulo, count(keyword) palabras from estadistica group by idproducto,titulo order by palabras DESC limit 20';
 
     	$result = DB::select($query);
     	return $result;

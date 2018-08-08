@@ -34,7 +34,17 @@
 	</header>
 	<section class="main container">
 		<div class="form-group">
-			{{ $productos }}
+		</div>
+	</section>
+	<section class="main container">
+		<div class="form-group">
+			@foreach($productos as $item)
+				<ul class="list-group"> {{ $item->idproducto }} - {{ $item->titulo }}
+					@foreach($item->palabras as $palabra)
+				  		<li class="list-group-item">{{ $palabra->keyword }}</li>
+					@endforeach
+				</ul>
+			@endforeach
 		</div>
 	</section>
 	<section class="main container">
