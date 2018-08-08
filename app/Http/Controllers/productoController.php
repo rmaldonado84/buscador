@@ -36,7 +36,7 @@ class productoController extends Controller
 		$productos = $productoModel->est_productos();
 
 		foreach ($productos as $producto) {
-			$producto->cantidad = $productoModel->est_palabras($producto->idproducto);
+			$producto->palabras = $productoModel->est_palabras($producto->idproducto);
 		}
 		$productos = json_encode($productos);
 
