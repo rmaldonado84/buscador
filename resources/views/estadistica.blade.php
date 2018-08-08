@@ -19,16 +19,6 @@
 					<a class="navbar-brand" href="estadistica">Estadística</a>
 				</div>
 				<!-- Inicia Menu -->
-				<div id="navegacion-fm">
-					<form id="formBuscador" action="" class="navbar-form navbar-right" role="search">
-						<div class="form-group">
-							<input id="keyword" type="text" class="form-control" placeholder="Buscar">
-						</div>
-						<button type="submit" class="btn btn-primary">
-							<span class="glyphicon glyphicon-search"></span>
-						</button>
-					</form>
-				</div>
 			</div>
 		</nav>
 	</header>
@@ -45,12 +35,6 @@
 					@endforeach
 				</ul>
 			@endforeach
-		</div>
-	</section>
-	<section class="main container">
-		<div class="form-group">
-			<textarea id="json_response" onchange="auto_grow(this)" class="form-control">
-			</textarea>
 		</div>
 	</section>
 
