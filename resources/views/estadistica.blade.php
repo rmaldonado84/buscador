@@ -35,7 +35,6 @@
 	<section class="main container">
 		<div class="form-group">
 			{{ $productos }}
-			{{ $palabras }}
 		</div>
 	</section>
 	<section class="main container">
