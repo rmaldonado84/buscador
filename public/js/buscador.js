@@ -10,7 +10,6 @@ $(document).ready( function () {
 		$.post( baseUrl + "/search", param, function (data) {
 			var json_response = JSON.parse(data);
 
-
 			$("#json_response").val(JSON.stringify(json_response, null, 4)).change();
 			var data = JSON.parse(data);
 			//foreach(data as reg)
